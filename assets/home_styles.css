@@ -1,0 +1,378 @@
+/* ============================================================================
+   STYLES CSS - PAGE D'ACCUEIL DASHBOARD MICROFINANCE
+   ============================================================================
+   Fichier à placer dans le dossier assets/ de votre projet Dash
+   ============================================================================ */
+
+/* Import de la police Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Reset et configuration de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.main-header {
+    background: white;
+    padding: 1rem 1rem 1rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: left;
+    gap: 35rem;
+    flex-wrap: wrap;
+}
+
+.header-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: navy;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+    align-self: left;
+}
+
+.header-subtitle {
+    font-size: 0.9rem;
+    color: rgba(162, 199, 247, 0.9);
+    font-weight: 200;
+    margin-bottom: 3;
+    text-align: left;
+}
+
+.year-badge {
+    background: linear-gradient(135deg, #D4AF37 0%, #C5A028 100%);
+    color: #1a3a1a;
+    padding: 0.6rem 1rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: auto;
+    box-shadow: 0 4px 6px rgba(212, 175, 55, 0.3);
+    display: inline-block;
+    white-space: nowrap; 
+    height: auto;
+    align-items: center;
+}
+
+/* ========================================
+   CAROUSEL SECTION
+   ======================================== */
+
+.carousel-wrapper {
+    max-width: 80%;
+    margin: 0.5rem auto;
+    padding: 0 1rem;
+}
+
+.custom-carousel {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    height: 350px;
+}
+
+.custom-carousel .carousel {
+    height: 450px;
+}
+
+.custom-carousel .carousel-inner {
+    height: 350px;
+}
+
+.custom-carousel .carousel-item {
+    height: 350px;
+}
+
+.custom-carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Légende personnalisée du carousel */
+.carousel-caption-custom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3rem;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    text-align: left;
+}
+
+.custom-carousel .carousel-caption h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.8rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.custom-carousel .carousel-caption p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 600px;
+    margin-bottom: 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Personnalisation des contrôles du carousel */
+.custom-carousel .carousel-control-prev,
+.custom-carousel .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    margin: 0 2rem;
+}
+
+.custom-carousel .carousel-control-prev-icon,
+.custom-carousel .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}
+
+.custom-carousel .carousel-control-prev:hover,
+.custom-carousel .carousel-control-next:hover {
+    background-color: #c9a85c;
+    opacity: 1;
+}
+
+/* Personnalisation des indicateurs */
+.custom-carousel .carousel-indicators {
+    bottom: 2rem;
+    margin-bottom: 0;
+}
+
+.custom-carousel .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    margin: 0 0.4rem;
+    opacity: 1;
+}
+
+.custom-carousel .carousel-indicators button.active {
+    width: 40px;
+    border-radius: 6px;
+    background-color: #c9a85c;
+    opacity: 1;
+}
+
+/* ========================================
+   NAVIGATION GRID
+   ======================================== */
+
+.nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+.nav-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.nav-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #2d5016;
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-card:hover::before {
+    transform: scaleY(1);
+}
+
+.nav-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #1a3a52 0%, #2d5016 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.nav-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.8rem;
+}
+
+.nav-description {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.nav-link-text {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #2d5016;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: gap 0.3s ease;
+}
+
+.nav-card:hover .nav-link-text {
+    gap: 1rem;
+}
+
+/* ========================================
+   OVERVIEW SECTION
+   ======================================== */
+
+.overview-section {
+    max-width: 1400px;
+    margin: 5rem auto 3rem auto;
+    padding: 0 2rem;
+}
+
+.overview-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 3rem;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.overview-item {
+    text-align: center;
+    padding: 2rem;
+}
+
+.overview-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    font-size: 2rem;
+    color: white;
+}
+
+.overview-icon.credit {
+    background: linear-gradient(135deg, #2d5016 0%, #2ecc71 100%);
+}
+
+.overview-icon.risk {
+    background: linear-gradient(135deg, #4a3425 0%, #c9a85c 100%);
+}
+
+.overview-icon.analysis {
+    background: linear-gradient(135deg, #1a3a52 0%, #3498db 100%);
+}
+
+.overview-item-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.8rem;
+}
+
+.overview-item-description {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 2rem;
+    }
+    
+    .custom-carousel,
+    .custom-carousel .carousel-inner,
+    .custom-carousel .carousel-item {
+        height: 400px;
+    }
+    
+    .carousel-caption-custom h3 {
+        font-size: 1.8rem;
+    }
+    
+    .carousel-caption-custom p {
+        font-size: 1rem;
+    }
+    
+    .nav-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .custom-carousel .carousel-control-prev {
+        left: 1rem;
+    }
+    
+    .custom-carousel .carousel-control-next {
+        right: 1rem;
+    }
+}

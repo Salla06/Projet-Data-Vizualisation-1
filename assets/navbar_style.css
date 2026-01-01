@@ -1,0 +1,51 @@
+/* ============================================================================
+   STYLES CSS - NAVBAR DASHBOARD MICROFINANCE
+   ============================================================================
+   Fichier à placer dans le dossier assets/ de votre projet Dash
+   Styles pour une navbar compacte et élégante selon le modèle PUDC
+   ============================================================================ */
+
+/* Forcer la couleur de fond navy foncé en surchargeant Bootstrap */
+.navbar {
+    background-color: #1a3a52 !important;
+    min-height: auto !important;
+}
+
+.navbar-dark {
+    background-color: #1a3a52 !important;
+}
+
+.bg-dark {
+    background-color: #1a3a52 !important;
+}
+
+/* Styles pour les liens de navigation */
+.navbar .nav-link {
+    border-bottom: 2px solid transparent !important;
+    background-color: transparent !important;
+}
+
+.navbar .nav-link:hover {
+    border-bottom: 2px solid #c9a85c !important;
+    background-color: transparent !important;
+    color: #ffffff !important;
+}
+
+.navbar .nav-link.active {
+    border-bottom: 2px solid #c9a85c !important;
+    background-color: transparent !important;
+    color: #ffffff !important;
+    font-weight: 500 !important;
+}
+
+/* Assurer que la navbar reste compacte */
+.navbar-brand {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Optimisation des espacements dans la navbar */
+.navbar .container-fluid {
+    padding-top: 0.8rem !important;
+    padding-bottom: 0.8rem !important;
+}
